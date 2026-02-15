@@ -8,6 +8,23 @@ Aplicación sencilla construida en Node‑RED para consultar y visualizar inform
 - Estructura modular y facil de extender.
 - Pensado para pruebas rapidas, demos o como base para proyectos educativos.
 
+## Capturas y explicacion
+
+### Informacion general
+Vista principal con busqueda por ubicacion, temperatura actual y sensacion termica, descripcion del estado del cielo y un resumen diario con maximo/minimo, lluvia y viento.
+
+![Informacion general](docs/images/info-general.png)
+
+### Mapa
+Mapa interactivo con capas (nubes, precipitacion, temperatura y viento) centrado en la ubicacion consultada.
+
+![Mapa](docs/images/mapa.png)
+
+### Calidad del aire
+Panel con valores actuales de calidad del aire y una referencia para comparar rangos esperados.
+
+![Calidad del aire](docs/images/calidad-aire.png)
+
 ## Requisitos
 - Docker Desktop (incluye Docker Compose)
 - Una API key valida de OpenWeatherMap
