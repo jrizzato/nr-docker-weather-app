@@ -1,0 +1,9 @@
+services:
+ 
+  node-red:
+    build: ./node-red
+    ports:
+      - "1880:1880"
+
+    volumes:
+    - ./node-red/workspace:/data
