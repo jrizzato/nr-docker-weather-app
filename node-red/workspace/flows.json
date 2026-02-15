@@ -171,7 +171,7 @@
         "type": "function",
         "z": "bf5e655127c9578c",
         "name": "Function Geocoding URL",
-        "func": "// 1. Obtener la ciudad del mensaje\nconst city = msg.payload;\n\n// 2. Codificar la ciudad para URL (manejar espacios y caracteres especiales)\nconst encodedCity = encodeURIComponent(city);\n\n// 3. Construir la URL usando template literals (backticks)\nconst apiKey = process.env.OPENWEATHER_API_KEY;\nmsg.url = `http://api.openweathermap.org/geo/1.0/direct?q=${encodedCity}&limit=5&appid=${apiKey}&lang=es`;\n\n// 4. Limpiar el payload para evitar conflictos\nmsg.payload = \"\";\n\nreturn msg;",
+        "func": "// 1. Obtener la ciudad del mensaje\nconst city = msg.payload;\n\n// 2. Codificar la ciudad para URL (manejar espacios y caracteres especiales)\nconst encodedCity = encodeURIComponent(city);\n\n// 3. Construir la URL usando template literals (backticks)\nconst apiKey = env.get(\"OPENWEATHER_API_KEY\");\nmsg.url = `http://api.openweathermap.org/geo/1.0/direct?q=${encodedCity}&limit=5&appid=${apiKey}&lang=es`;\n\n// 4. Limpiar el payload para evitar conflictos\nmsg.payload = \"\";\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
